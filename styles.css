@@ -1,0 +1,92 @@
+body {
+    background-color: #1c1c1c;
+    color: #ff69b4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+}
+
+.blog-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+}
+
+.blog-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+}
+
+.blog-content {
+    padding: 15px;
+}
+
+.blog-content h2 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.blog-content p {
+    font-size: 14px;
+    color: #ff69b4;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    background: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.read-more:hover {
+    background: #ff1493;
+}
+
+/* Adding Images with Descriptions */
+.blog-card.travel img {
+    content: url('https://source.unsplash.com/300x200/?travel');
+}
+
+.blog-card.photography img {
+    content: url('https://source.unsplash.com/300x200/?photography');
+}
+
+.blog-card.love img {
+    content: url('https://source.unsplash.com/300x200/?love');
+}
+
+.blog-card.travel .blog-content p::after {
+    content: " - Traveling opens new horizons and endless possibilities.";
+}
+
+.blog-card.photography .blog-content p::after {
+    content: " - Capture moments that last a lifetime.";
+}
+
+.blog-card.love .blog-content p::after {
+    content: " - Love is the essence of life and relationships.";
+}
